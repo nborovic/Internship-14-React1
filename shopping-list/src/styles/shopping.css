@@ -1,0 +1,88 @@
+.main__shopping {
+  display: flex;
+}
+
+.shopping__groceries-list {
+  width: 50%;
+  margin: 25px;
+  position: relative;
+}
+
+.groceries-list__title {
+  margin-bottom: 20px;
+}
+
+.groceries-list__delete-button {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.groceries-list__delete-button:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.delete-button__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.list__grocerie {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+  color: #000;
+  background: #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.list__grocerie:nth-child(2n) {
+  background: #bebebe;
+}
+
+.grocerie__button {
+  padding: 1px;
+  margin-right: 15px;
+  border: 2px solid #fff;
+  transition: all 150ms ease-in-out;
+  border-radius: 4px;
+}
+
+.button__icon {
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  float: left;
+}
+
+.list__grocerie:hover > .grocerie__button--add {
+  background-color: green;
+  border-color: green;
+}
+
+.list__grocerie:hover > .grocerie__button--remove {
+  background-color: red;
+  border-color: red;
+}
+
+.grocerie__name {
+  font-size: 20px;
+}
+
+.td-lt {
+  text-decoration: line-through;
+}
+
+.td-n {
+  text-decoration: none;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-iblock {
+  display: inline-block;
+}
