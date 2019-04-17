@@ -86,33 +86,37 @@ class App extends Component {
   }
 
   addItem = id => {
-    let groceriesCopy = this.state.groceries;
-    groceriesCopy[id - 1].count++;
-
-    this.setState({ groceries: groceriesCopy });
+    this.setState(state => {
+      let groceriesCopy = state.groceries;
+      groceriesCopy[id - 1].count++;
+      return groceriesCopy;
+    });
   };
 
   removeItem = id => {
-    let groceriesCopy = this.state.groceries;
-    groceriesCopy[id - 1].count--;
-
-    this.setState({ groceries: groceriesCopy });
+    this.setState(state => {
+      let groceriesCopy = state.groceries;
+      groceriesCopy[id - 1].count--;
+      return groceriesCopy;
+    });
   };
 
   removeAllItems = () => {
-    let groceriesCopy = this.state.groceries;
-    groceriesCopy.forEach(grocerie => (grocerie.count = 0));
-
-    this.setState({ groceries: groceriesCopy });
+    this.setState(state => {
+      let groceriesCopy = state.groceries;
+      groceriesCopy.forEach(grocerie => (grocerie.count = 0));
+      return groceriesCopy;
+    });
   };
 
   changeItemCompletion = (e, id) => {
-    let groceriesCopy = this.state.groceries;
-    groceriesCopy[id - 1].isCompleted = groceriesCopy[id - 1].isCompleted
-      ? false
-      : true;
-
-    this.setState({ groceries: groceriesCopy });
+    this.setState(state => {
+      let groceriesCopy = this.state.groceries;
+      groceriesCopy[id - 1].isCompleted = groceriesCopy[id - 1].isCompleted
+        ? false
+        : true;
+      return groceriesCopy;
+    });
     e.stopPropagation();
   };
 

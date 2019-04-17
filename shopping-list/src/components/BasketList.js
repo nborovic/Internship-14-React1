@@ -1,7 +1,7 @@
 import React from "react";
 import Grocerie from "./Grocerie";
 
-let BasketList = props => {
+const BasketList = props => {
   let basketListCount = 0;
 
   return (
@@ -29,7 +29,7 @@ let BasketList = props => {
           key="0"
           grocerie={{
             id: 0,
-            label: "Your basket is empty",
+            label: "Your basket is empty!",
             count: "",
             isCompleted: false
           }}

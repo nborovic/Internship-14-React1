@@ -1,7 +1,7 @@
 import React from "react";
 import Grocerie from "./Grocerie";
 
-let GroceriesList = props => {
+const GroceriesList = props => {
   return (
     <div className="shopping__groceries-list">
       <h2 className="groceries-list__title">Groceries</h2>

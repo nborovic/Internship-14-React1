@@ -1,6 +1,6 @@
 import React from "react";
 
-let addButton = () => {
+const addButton = () => {
   return (
     <button className="grocerie__button grocerie__button--add">
       <img
@@ -12,7 +12,7 @@ let addButton = () => {
   );
 };
 
-let removeButton = () => {
+const removeButton = () => {
   return (
     <button className="grocerie__button grocerie__button--remove">
       <img
@@ -24,7 +24,7 @@ let removeButton = () => {
   );
 };
 
-let Grocerie = props => {
+const Grocerie = props => {
   return (
     <div
       className="list__grocerie clearfix"
